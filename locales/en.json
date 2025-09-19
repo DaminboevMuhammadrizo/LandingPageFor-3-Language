@@ -1,0 +1,64 @@
+{
+  "header": {
+    "logo": "logo",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
+      "blog": "Blog",
+      "careers": "Careers"
+    }
+  },
+  "requestInvite": "Request Invite",
+  "hero": {
+    "title": "Next generation\ndigital banking",
+    "description": "Take your financial life online. Your Digitalbank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more."
+  },
+  "section": {
+    "whyChoose": "Why choose Digitalbank?",
+    "whyChooseDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore quibusdam porro ipsa similique magnam vero ipsum ea magni numquam nobis...",
+    "features": {
+      "budgeting": {
+        "title": "Budgeting Icon",
+        "heading": "Online Banking",
+        "description": "Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world."
+      },
+      "onboarding": {
+        "title": "Onboarding Icon",
+        "heading": "Simple Onboarding",
+        "description": "We don't do branches. Open your account in minutes online and start taking control of your finances right away."
+      },
+      "api": {
+        "title": "API Icon",
+        "heading": "Open API",
+        "description": "Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier."
+      },
+      "online": {
+        "title": "Online Icon",
+        "heading": "Fast Transfers",
+        "description": "Send money instantly with zero fees — even internationally. Speed and security guaranteed."
+      }
+    }
+  },
+  "articles": {
+    "title": "Latest Articles",
+    "article": {
+      "author": "By Claire Robinson",
+      "heading": "Receive money in any currency with no fees",
+      "description": "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single …"
+    }
+  },
+  "footer": {
+    "logo": "logo",
+    "social": "FacebookYouTubeTwitterPinterestInstagram",
+    "links": {
+      "aboutUs": "About Us",
+      "contact": "Contact",
+      "blog": "Blog",
+      "careers": "Careers",
+      "support": "Support",
+      "privacyPolicy": "Privacy Policy"
+    },
+    "copyright": "© 2025 Digitalbank. All Rights Reserved."
+  }
+}

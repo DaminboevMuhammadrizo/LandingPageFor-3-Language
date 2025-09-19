@@ -1,0 +1,66 @@
+{
+  "header": {
+    "logo": "logo",
+    "nav": {
+      "home": "Bosh sahifa",
+      "about": "Biz haqimizda",
+      "contact": "Kontaktlar",
+      "blog": "Blog",
+      "careers": "Karyera"
+    }
+  },
+
+  "requestInvite": "Taklifnoma olish",
+
+  "hero": {
+    "title": "Raqamli banking\nning yangi avlodi",
+    "description": "Moliyangizni onlaynga o'tkazing. Sizning Digitalbank hisobingiz sarflash, tejash, byudjet tuzish, investitsiyalar va boshqalar uchun yagona manzil bo‘ladi."
+  },
+  "section": {
+    "whyChoose": "Nega Digitalbank-ni tanlash kerak?",
+    "whyChooseDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore quibusdam porro ipsa similique magnam vero ipsum ea magni numquam nobis...",
+    "features": {
+      "budgeting": {
+        "title": "Byudjet ikonasi",
+        "heading": "Onlayn Banking",
+        "description": "Bizning zamonaviy veb va mobil ilovalarimiz moliyangizni dunyoning istalgan joyida kuzatib borishga imkon beradi."
+      },
+      "onboarding": {
+        "title": "Ro‘yxatdan o‘tish ikonkasi",
+        "heading": "Oddiy Ro‘yxatdan o‘tish",
+        "description": "Bizda filiallar yo‘q. Hisobingizni onlayn bir necha daqiqada oching va moliyangiz ustidan nazoratni darhol boshlang."
+      },
+      "api": {
+        "title": "API ikonkasi",
+        "heading": "Ochiq API",
+        "description": "Jamg‘armangizni, investitsiyalaringizni, pensiyangizni va boshqalarni bitta hisobdan boshqaring. Pulingizni kuzatish hech qachon oson bo‘lmagan."
+      },
+      "online": {
+        "title": "Onlayn ikonkasi",
+        "heading": "Tezkor O‘tkazmalar",
+        "description": "Pulni darhol, hech qanday to‘lovlarsiz yuboring — hatto xalqaro darajada ham. Tezlik va xavfsizlik kafolatlangan."
+      }
+    }
+  },
+  "articles": {
+    "title": "So‘nggi maqolalar",
+    "article": {
+      "author": "Muallif: Kler Robinson",
+      "heading": "Har qanday valyutada pul qabul qiling, komissiyasiz",
+      "description": "Dunyo kichraymoqda va biz yanada ko‘proq harakatdamiz. Nega faqat bitta valyutada pul qabul qilishga majburlanish kerak ..."
+    }
+  },
+  "footer": {
+    "logo": "logo",
+    "social": "FacebookYouTubeTwitterPinterestInstagram",
+    "links": {
+      "aboutUs": "Biz haqimizda",
+      "contact": "Kontaktlar",
+      "blog": "Blog",
+      "careers": "Karyera",
+      "support": "Qo‘llab-quvvatlash",
+      "privacyPolicy": "Maxfiylik siyosati"
+    },
+    "copyright": "© 2025 Digitalbank. Barcha huquqlar himoyalangan."
+  }
+}
