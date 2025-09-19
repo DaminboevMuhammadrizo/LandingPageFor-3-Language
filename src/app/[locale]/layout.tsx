@@ -8,10 +8,7 @@ interface LocaleLayoutProps {
   params: { locale: string };
 }
 
-export default function LocaleLayout({
-  children,
-  params: { locale }
-}: LocaleLayoutProps) {
+export default function LocaleLayout({ children, params: { locale } }: LocaleLayoutProps): React.ReactElement  {
   if (!locales.includes(locale)) {
     notFound();
   }
@@ -25,6 +22,6 @@ export default function LocaleLayout({
   );
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ locale: string }[]> {
   return locales.map((locale) => ({ locale }));
 }
