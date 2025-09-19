@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export default function Header({ locale }: HeaderProps) {
   const router = useRouter();
-  const [translations, setTranslations] = useState<any>({});
+  const [translations, setTranslations] = useState<Record<string, unknown>>({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -34,8 +34,18 @@ export default function Header({ locale }: HeaderProps) {
   };
 
   const t = (key: string): string => {
-    return key.split('.').reduce((obj, k) => obj?.[k], translations) || key;
+  const result = key
+    .split('.')
+    .reduce((obj, k) => {
+      if (typeof obj === 'object' && obj !== null && k in obj) {
+        return (obj as Record<string, unknown>)[k];
+      }
+      return undefined;
+    }, translations as unknown) as string;
+
+    return result || key;
   };
+
 
   if (loading) {
     return <div>Yuklanmoqda...</div>;
@@ -46,7 +56,7 @@ export default function Header({ locale }: HeaderProps) {
       <div className="container mx-auto px-4 flex justify-between items-center h-full max-w-[1200px]">
         {/* Logo */}
         <div className="flex items-center">
-          <Image src="/img/logo-dark.svg" width={300} height={140} alt={t("logo")} />
+          <Image src="/img/logo-dark.svg" width={200} height={140} alt={t("logo")} />
         </div>
 
         {/* Navigation */}

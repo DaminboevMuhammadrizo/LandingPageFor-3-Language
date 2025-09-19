@@ -8,7 +8,7 @@ interface FooterProps {
 }
 
 function Footer({ locale }: FooterProps) {
-  const [translations, setTranslations] = useState<any>({});
+  const [translations, setTranslations] = useState<Record<string, unknown>>({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -27,8 +27,18 @@ function Footer({ locale }: FooterProps) {
   }, [locale]);
 
   const t = (key: string): string => {
-    return key.split('.').reduce((obj, k) => obj?.[k], translations) || key;
-  };
+  const result = key
+    .split('.')
+    .reduce((obj, k) => {
+      if (typeof obj === 'object' && obj !== null && k in obj) {
+        return (obj as Record<string, unknown>)[k];
+      }
+      return undefined;
+    }, translations as unknown) as string;
+
+  return result || key;
+};
+
 
   if (loading) {
     return <div>Yuklanmoqda...</div>;
@@ -39,7 +49,7 @@ function Footer({ locale }: FooterProps) {
       <div className="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start space-y-10 md:space-y-0">
         {/* Logo + Social Icons */}
         <div className="flex flex-col items-center md:items-start space-y-6">
-          <Image src="/img/logo-light.svg" width={150} height={40} alt={t("logo")} />
+          <Image src="/img/logo-light.svg" width={200} height={40} alt={t("logo")} />
           <div className="flex space-x-4">
             <Image src="/img/icon-facebook.svg" width={20} height={20} alt="Facebook" />
             <Image src="/img/icon-youtube.svg" width={20} height={20} alt="YouTube" />

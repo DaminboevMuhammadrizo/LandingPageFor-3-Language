@@ -8,7 +8,7 @@ interface ArticleProps {
 }
 
 function Article({ locale }: ArticleProps) {
-  const [translations, setTranslations] = useState<any>({});
+  const [translations, setTranslations] = useState<Record<string, unknown>>({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -27,8 +27,18 @@ function Article({ locale }: ArticleProps) {
   }, [locale]);
 
   const t = (key: string): string => {
-    return key.split('.').reduce((obj, k) => obj?.[k], translations) || key;
-  };
+  const result = key
+    .split('.')
+    .reduce((obj, k) => {
+      if (typeof obj === 'object' && obj !== null && k in obj) {
+        return (obj as Record<string, unknown>)[k];
+      }
+      return undefined;
+    }, translations as unknown) as string;
+
+  return result || key;
+};
+
 
   if (loading) {
     return <div>Yuklanmoqda...</div>;
